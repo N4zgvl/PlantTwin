@@ -147,7 +147,7 @@ PlantTwin/
 ### 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/PlantTwin.git
+git clone https://github.com/N4zgvl/PlantTwin.git
 ```
 
 ### 2️⃣ Restaurar dependencias
