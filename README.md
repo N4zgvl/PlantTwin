@@ -178,15 +178,6 @@ https://localhost:5001
 
 ---
 
-## 🎥 Entregables del proyecto
-
-✔ Código refactorizado
-✔ README técnico
-✔ Informe en PDF (análisis y justificación)
-✔ Video LOOM de demostración
-
----
-
 ## 👨‍💻 Autor
 
 **Nombre:** José Guadalupe Rodríguez Sastre
@@ -198,10 +189,3 @@ https://localhost:5001
 ## 📄 Licencia
 
 Proyecto de uso académico bajo licencia **MIT**.
-
----
-
-Si quieres, en el siguiente mensaje puedo:
-
-✅ Hacerte el **guion para tu video LOOM**
-✅ Prepararte el **contenido del PDF del informe**
