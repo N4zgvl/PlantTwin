@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a;
+    color: white;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #020617;
+    padding: 20px;
+}
+
+    .sidebar .logo {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .sidebar nav a {
+        display: block;
+        color: #cbd5f5;
+        text-decoration: none;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        margin-bottom: 4px;
+    }
+
+        .sidebar nav a:hover {
+            background-color: #1e293b;
+            padding-left: 16px;
+        }
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #020617;
+    overflow-y: auto;
+}
+
+/* TARJETAS */
+.card {
+    background-color: #020617;
+    color: white;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+/* BADGES */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+    .badge.error {
+        background-color: #7f1d1d;
+    }
+
+    .badge.success {
+        background-color: #064e3b;
+    }
