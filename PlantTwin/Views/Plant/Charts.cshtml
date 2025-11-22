@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Gráficas de Sensores";
+}
+
+<h2>📈 Monitoreo de Sensores</h2>
+
+<canvas id="tempChart" width="400" height="150"></canvas>
+<canvas id="rpmChart" width="400" height="150" class="mt-4"></canvas>
+<canvas id="pressureChart" width="400" height="150" class="mt-4"></canvas>
+
+<script>
+    const tempCtx = document.getElementById('tempChart');
+    const rpmCtx = document.getElementById('rpmChart');
+    const pressureCtx = document.getElementById('pressureChart');
+
+    const tempChart = new Chart(tempCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Temperatura (°C)',
+                data: [],
+                tension: 0.3
+            }]
+        }
+    });
+
+    const rpmChart = new Chart(rpmCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'RPM',
+                data: [],
+                tension: 0.3
+            }]
+        }
+    });
+
+    const pressureChart = new Chart(pressureCtx, {
+        type: 'line',
+        data: {
+            labels: [],
+            datasets: [{
+                label: 'Presión (bar)',
+                data: [],
+                tension: 0.3
+            }]
+        }
+    });
+
+    function addData(chart) {
+        const time = new Date().toLocaleTimeString();
+        chart.data.labels.push(time);
+        if (chart.data.labels.length > 10) chart.data.labels.shift();
+    }
+
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    function updateCharts() {
+        addData(tempChart);
+        tempChart.data.datasets[0].data.push(random(60, 120));
+        tempChart.update();
+
+        addData(rpmChart);
+        rpmChart.data.datasets[0].data.push(random(500, 3000));
+        rpmChart.update();
+
+        addData(pressureChart);
+        pressureChart.data.datasets[0].data.push(random(5, 15));
+        pressureChart.update();
+    }
+
+    setInterval(updateCharts, 2000);
+</script>

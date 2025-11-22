@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - PlantTwin</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+
+    <div class="app-container">
+
+        <!-- Menú lateral -->
+        <aside class="sidebar">
+            <div class="logo">⚙ Plant Twin</div>
+
+            <nav>
+                <a asp-controller="Plant" asp-action="Index">📊 Dashboard</a>
+                <a asp-controller="History" asp-action="Index">📜 Historial</a>
+                <a asp-controller="Settings" asp-action="Index">⚙ Configuración</a>
+                <a asp-controller="Simulations" asp-action="Index">🧪 Simulaciones</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="content">
+            @RenderBody()
+        </main>
+
+    </div>
+
+</body>
+</html>

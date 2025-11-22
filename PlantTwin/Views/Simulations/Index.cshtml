@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Simulaciones";
+}
+
+<h2>🧪 Laboratorio de Simulación</h2>
+
+<div class="card p-3 mt-3">
+    <p>Ejecutar simulación avanzada:</p>
+
+    <form method="post" asp-action="HighTemp">
+        <button class="btn btn-danger">🔥 Simular pico de temperatura</button>
+    </form>
+
+    <form method="post" asp-action="PowerFail" class="mt-2">
+        <button class="btn btn-warning">⚡ Simular falla eléctrica</button>
+    </form>
+</div>
